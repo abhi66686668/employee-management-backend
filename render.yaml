@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: employee-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: MONGO_URI
+        value: your_mongodb_connection_string
+      - key: PORT
+        value: 10000
